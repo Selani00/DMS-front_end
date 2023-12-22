@@ -10,10 +10,11 @@ const Navbar = () => {
         { link: "News", path: "news" },
     ]
     return (
-        <nav className='md:px-0 p-0 max-w-screen-2xl mx-auto '>
+        
+        <nav className='md:px-0 p-0  mx-auto  '>
             <div>
                 {/*Language div */}
-                <div className='bg-primary flex justify-between items-center p-2 container md:px-10  max-w-screen-2x1 mx-auto '>
+                <div className='bg-primary flex justify-between items-center p-2 container md:px-10  max-w-full mx-auto '>
                     <div className='bg-grey rounded-lg  py-0'>
                         <button className=' text-sm rounded-lg hover:bg-black hover:text-white px-4  m-0'>සිංහල</button>
                         <button className=' text-sm rounded-lg hover:bg-black hover:text-white px-4  m-0'>English</button>
@@ -24,7 +25,7 @@ const Navbar = () => {
                 </div>
 
                 {/* <!--Search div--> */}
-                <div className='text-lg container flex justify-between items-center font-medium bg-white md:px-16 p-4 max-w-screen-2x1 mx-auto'>
+                <div className='text-lg container flex justify-between items-center font-medium bg-white md:px-16 p-4 max-w-full mx-auto'>
                     <div className='flex space-x-14 items-center' >
                         <a href="/" className='text-2xl font-semibold flex items-center space-x-3 text-primary'>
                             <img src={logo} alt="" className='w-20 ini' /><span>Disaster Management Center</span>
@@ -53,7 +54,7 @@ const Navbar = () => {
                 </div>
 
                 {/*Nav Links */}
-                <div className='bg-secondary text-x1 container mx-auto flex justify-between items-center md:px-14 p-2'>
+                <div className='bg-secondary text-x1 container mx-auto flex justify-between items-center md:px-14 p-2 max-w-full'>
                     <div className='flex space-x-14 items-center pl-20'>
                         <ul className='md:flex space-x-16 font-semibold hidden'>
                             {

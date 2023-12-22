@@ -37,8 +37,8 @@ const image_bar = () => {
     // }, [currentIndex, slides.length]);
 
     return (
-        <div>
-            <div className='max-w-[1200px] h-[460px]  m-0 relative group ' >
+        <div >
+            <div className='max-w-[1200px] h-[460px]  m-0 relative group' >
                 <div style={{ backgroundImage: `url(${slides[currentIndex].src})` }} className='w-full h-full  bg-center bg-cover duration-500 px-0'>
 
                 </div>
@@ -54,17 +54,15 @@ const image_bar = () => {
 
 
             {/*Vision mission*/}
-            <div >
-
-
-                <div className="flex justify-center items-center h-screen">
+            <div  className='flex '>
+                <div className=" justify-center items-center">
                     <div className="relative">
                         {/* Big Circle */}
-                        <div className="bg-black w-[250px] h-[250px] rounded-full flex justify-center items-center">
+                        <div className="bg-white w-[250px] h-[250px] rounded-full flex justify-center items-center">
                             {/* Small Circle */}
                             <div className="bg-primary w-[210px] h-[210px] rounded-full absolute top-0 left-0 right-0 bottom-0 m-auto">
                                 <div className='m-6 text-center'>
-                                    <div className='text-white font-extrabold text-4xl'>Vision</div>
+                                    <div className='text-white font-extrabold text-4xl mb-4'>Vision</div>
                                     <div className='text-white font-semibold text-base'>foster resilience and reduce vulnerabilities, ensuring a safer and more secure future for all.</div>
                                 </div>
                             </div>
@@ -74,7 +72,7 @@ const image_bar = () => {
 
                 <div className="bg-secondary w-[270px] h-[270px] rounded-full absolute ">
                     <div className='ml-10 m-6 text-center'>
-                        <div className='text-white font-extrabold text-4xl'>Mision</div>
+                        <div className='text-white font-extrabold text-4xl mb-4'>Mision</div>
                         <div className='text-white font-semibold text-base '>empower individuals, organizations, and entire communities to build resilience and respond effectively to disasters of all scales.</div>
                     </div>
                 </div>
