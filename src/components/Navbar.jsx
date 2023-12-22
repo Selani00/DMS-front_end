@@ -10,10 +10,10 @@ const Navbar = () => {
         { link: "News", path: "news" },
     ]
     return (
-        <nav className='md:px-0 p-0 max-w-screen-2xl mx-auto'>
+        <nav className='md:px-0 p-0 max-w-screen-2xl mx-auto '>
             <div>
                 {/*Language div */}
-                <div className='bg-primary flex justify-between items-center p-2 container md:px-10  max-w-screen-2x1 mx-auto'>
+                <div className='bg-primary flex justify-between items-center p-2 container md:px-10  max-w-screen-2x1 mx-auto '>
                     <div className='bg-grey rounded-lg  py-0'>
                         <button className=' text-sm rounded-lg hover:bg-black hover:text-white px-4  m-0'>සිංහල</button>
                         <button className=' text-sm rounded-lg hover:bg-black hover:text-white px-4  m-0'>English</button>
