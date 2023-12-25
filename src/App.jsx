@@ -19,6 +19,7 @@ function App() {
       <LanguageBar/>
       <Searchbar/>
       <Navbar/>
+      <Image_slider/>
       <About/>
       <Services/>
       <More/>

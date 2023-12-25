@@ -6,18 +6,16 @@ import image4 from '../assets/Slide_Bar/four.png'
 import { Carousel } from 'flowbite-react'
 
 const Image_slider = () => {
-    const slides = [
-        image1, image2, image3, image4
-    ];
+    
     return (
-        <section className='gird gap-8 md:grid-cols-2 md:items-center'>
-            <div className=" w-screen h-screen ">
+        <section className='gird gap-8 md:grid-cols-2 md:items-center max-w-full'>
+            
+            <div className=" max-w-screen h-screen ">
                 <Carousel>
-                    {slides.map((image, index) => (
-                        <div key={index}>
-                            <img src={image} alt={`Slide ${index + 1}`} className='w-full rounded-lg' />
-                        </div>
-                    ))}
+                    <img src={image1} alt=""/>
+                    <img src={image2} alt=""/>
+                    <img src={image3} alt=""/>
+                    <img src={image4} alt=""/>
 
                 </Carousel>
 
