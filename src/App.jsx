@@ -1,16 +1,29 @@
-
 import './App.css'
+import Home from './pages/Home'
+import LanguageBar from './components/LanguageBar'
+import Searchbar from './components/Searchbar'
 import Navbar from './components/Navbar'
-import ImageBar from './components/image_bar'
-import Home from './pages/home';
+import Image_slider from './components/Image_slider'
+import About from './components/About'
+import Services from './components/Services'
+import More from './components/More_from_us'
+import Footer from './components/Footer'
+
+
 
 function App() {
 
 
   return (
     <>
+      <LanguageBar/>
+      <Searchbar/>
       <Navbar/>
-      <ImageBar/>
+      <About/>
+      <Services/>
+      <More/>
+      <Footer/>
+ 
 
     </>
   )

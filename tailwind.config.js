@@ -3,6 +3,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    'node_modules/flowbite-react/lib/esm/**/*.js',
   ],
   theme: {
     extend: {
@@ -14,9 +15,20 @@ export default {
         'linear':"#949079",
         'white':"#FFFFFF",
         'black':"#000000",
-      }
+        'lightblue':"#dbeafe"
+      },
+
+      keyframes: {
+        blinkingBg: {
+            '0%, 100%': { backgroundColor: '#ef4444' },
+            '50%': { backgroundColor: '#fee2e2' },
+        }
+    },
+    animation: {
+        blinkingBg: 'blinkingBg 2s ease-in-out infinite',
+    }
     },
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin'),],
 }
 
