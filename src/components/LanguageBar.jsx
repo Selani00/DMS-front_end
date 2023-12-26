@@ -2,7 +2,7 @@ import React from 'react'
 
 const LanguageBar = () => {
     return (
-        <div class="bg-primary py-2 px-6 shadow-md z-10 flex justify-content-center align-items-center">
+        <div class="bg-primary py-2 px-6 shadow-md z-10 flex justify-content-center align-items-center ">
             <div class="flex flex-row items-center right-1 bg-grey rounded-full">
                 <button class="px-2 py-1 items-center  rounded-full  text-sm font-medium text-black  focus:bg-black focus:text-white focus:outline-none"
                 >
