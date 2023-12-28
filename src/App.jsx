@@ -1,14 +1,9 @@
 import './App.css'
 import Home from './pages/Home'
-import LanguageBar from './components/LanguageBar'
-import Searchbar from './components/Searchbar'
-import Navbar from './components/Navbar'
-import Image_slider from './components/Image_slider'
-import Emergancy from './components/Emergancy_button'
-import Services from './components/Services'
-import More from './components/More_from_us'
-import Footer from './components/Footer'
-import AboutN from './components/About_new'
+import LoginPage from './pages/Login'
+import Registration from './pages/Registration'
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+
 
 
 
@@ -16,20 +11,14 @@ function App() {
 
 
   return (
-    <>
-      <LanguageBar/>
-      <Searchbar/>
-      <Navbar/>
-      <Emergancy/>
-      <Image_slider/>
-      
-      <Services/>
-      <More/>
-      <AboutN/>
-      <Footer/>
- 
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/Login" element={<LoginPage/>} />
+        <Route path="/Registration" element={<Registration/>} />
 
-    </>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
