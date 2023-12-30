@@ -23,7 +23,7 @@ const LanguageBar = () => {
         </div>
       </div>
 
-      <section class="relative  overflow-hidden bg-lightblue py-4 px-8 ">
+      <section class="relative  overflow-hidden bg-white py-4 px-8 ">
         <div class="-mx-4 flex flex-wrap items-center">
           <div class="w-full px-4 lg:w-1/2 md:w-1/2">
             <div class="text-center lg:text-left ">
