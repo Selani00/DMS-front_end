@@ -13,11 +13,11 @@ const Footer = () => {
     return (
         <footer  className='max-w-full bg-primary'>
             <div class="mx-auto w-full max-w-screen-xl">
-                <div class="grid grid-cols-1 gap-8 px-10 py-6 lg:py-8 md:grid-cols-3">
+                <div class="grid grid-cols-1 gap-8 px-10 py-1 lg:py-8 md:grid-cols-3">
                     <div className='text-center'>
                         <h2 class="mb-6 text-lg font-semibold text-white uppercase ">Contact Us</h2>
-                        <ul class="text-white font-normal">
-                            <li class="mb-4 flex gap-4 items-center">
+                        <ul class="text-white font-normal text-sm">
+                            <li class="mb-4 flex gap-4  items-center">
                                 <i><LuPhoneCall /></i>
                                 <a href="#" class=" hover:underline">+94 112 136 222  /+94 112 670 002</a>
                             </li>
@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                     <div className='text-center'>
                         <h2 class="mb-6 text-2xl font-semibold text-white uppercase ">Related links</h2>
-                        <ul class="text-white  font-normal">
+                        <ul class="text-white  font-normal text-sm">
                             <li class="mb-4">
                                 <a href="#" class="hover:underline">Sri  Lanka Red Cross Society </a>
                             </li>
@@ -58,9 +58,9 @@ const Footer = () => {
                     </div>
                     <div className='text-center'>
                         <h2 class="mb-6 text-2xl font-semibold text-white uppercase ">Call Center<br /><span> 1717</span></h2>
-                        <ul class="text-white font-normal">
+                        <ul class="text-white font-normal text-sm">
                             <li class="mb-4">
-                                <a href="#" class="hover:underline font-medium">Switch to The App</a>
+                                <a href="#" class="font-medium">Switch to The App</a>
                             </li>
                             <li class="mb-4 ">
                                 <button>
@@ -123,5 +123,3 @@ const Footer = () => {
 
 export default Footer
 
-// if background color
-//<footer className='bg-gradient-to-r from-sky-500 to-indigo-500 container mx-auto  md:px-14 p-2 max-w-full'>
