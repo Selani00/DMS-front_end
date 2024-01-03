@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../assets/logo_main.png'
+import logo from '../../assets/logo.png'
 import { FaSearch,FaMicrophone } from "react-icons/fa";
 
 const LanguageBar = () => {
@@ -29,7 +29,7 @@ const LanguageBar = () => {
             <div class="text-center lg:text-left ">
               <a
                 href="/"
-                className="lg:text-2xl text-xl font-bold flex items-center space-x-3 text-primary"
+                className="lg:text-3xl text-2xl italic font-medium flex items-center space-x-3 text-primary"
               >
                 <img src={logo} alt="" className="w-20 ini" />
                 <span>Disaster Management Center</span>

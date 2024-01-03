@@ -82,6 +82,7 @@ const Login = () => {
           >
             Sign In
           </button>
+          
           <h4 className="text-center my-4 font-semibold">Or</h4>
 
           <button class="px-4 py-2 my-5 border flex items-center justify-center gap-2 border-slate-200  w-full rounded-lg text-slate-700  hover:border-slate-400  hover:text-slate-900  hover:shadow transition duration-150">

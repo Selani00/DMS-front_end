@@ -1,19 +1,19 @@
 import React from 'react'
-import LanguageBar from '../components/LanguageBar'
-import Navbar from '../components/Navbar'
-import Image_slider from '../components/Image_slider'
-import Emergancy from '../components/Emergancy_button'
-import Services from '../components/Services'
-import More from '../components/More_from_us'
-import Footer from '../components/Footer'
-import AboutN from '../components/About_new'
+import Navbar from '../components/Common/Navbar'
+import LanguageBar from '../components/Common/LanguageBar'
+import Footer from '../components/Common/Footer'
+
+import Image_slider from '../components/Home/Image_slider'
+import Services from '../components/Home/Services'
+import More from '../components/Home/More_from_us'
+
+import AboutN from '../components/Home/About_new'
 
 const Home = () => {
   return (
     <div>
       <LanguageBar/>
       <Navbar/>
-      <Emergancy/>
       <Image_slider/>     
       <Services/>
       <More/>

@@ -1,22 +1,17 @@
 import React from 'react'
-import FooterImg from '../assets/Footer.png'
+
 import { LuPhoneCall } from "react-icons/lu";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { HiOutlinePrinter } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
-import playStore from '../assets/Playstore.png'
-import AppStore from '../assets/AppStore.png'
+import playStore from '../../assets/playStore.png';
+import AppStore from '../../assets/AppStore.png'
 import { FaFacebookF,FaWhatsapp,FaTwitter,FaTelegram ,FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
-    const footerStyle = {
-        backgroundImage: `url(${FooterImg})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-
-    };
+    
     return (
-        <footer style={footerStyle} className='max-w-full'>
+        <footer  className='max-w-full bg-primary'>
             <div class="mx-auto w-full max-w-screen-xl">
                 <div class="grid grid-cols-1 gap-8 px-10 py-6 lg:py-8 md:grid-cols-3">
                     <div className='text-center'>
