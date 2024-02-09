@@ -27,7 +27,8 @@ const Donations = () => {
       </div>
 
     <Overview/>
-      <Footer/>
+    
+    <Footer/>
     </div>
   );
 };

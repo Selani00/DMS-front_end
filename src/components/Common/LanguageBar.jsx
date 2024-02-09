@@ -4,18 +4,18 @@ import { FaSearch,FaMicrophone } from "react-icons/fa";
 
 const LanguageBar = () => {
   return (
-    <div>
-      <div class="bg-primary py-2 px-6 shadow-md z-10 flex justify-content-center align-items-center ">
-        <div class="flex flex-row items-center right-1 bg-grey rounded-full">
-          <button class="px-2 py-1 items-center  rounded-full  text-sm font-medium text-black  focus:bg-black focus:text-white focus:outline-none">
-            <span class="text-md">සිංහල</span>
+    <div >
+      <div className="bg-primary py-2 px-6 shadow-md z-10 flex justify-content-center align-items-center ">
+        <div className="flex flex-row items-center right-1 bg-grey rounded-full">
+          <button className="px-2 py-1 items-center  rounded-full  text-sm font-medium text-black  focus:bg-black focus:text-white focus:outline-none">
+            <span className="text-md">සිංහල</span>
           </button>
 
-          <button class="px-2 py-1  items-center  rounded-full  text-sm font-medium text-black  focus:bg-black focus:text-white focus:outline-none ">
-            <span class="text-md">English</span>
+          <button className="px-2 py-1  items-center  rounded-full  text-sm font-medium text-black  focus:bg-black focus:text-white focus:outline-none ">
+            <span className="text-md">English</span>
           </button>
-          <button class="px-2 py-1 items-center  rounded-full  text-sm font-medium text-black  focus:bg-black focus:text-white focus:outline-none ">
-            <span class="text-md">தமிழ்</span>
+          <button className="px-2 py-1 items-center  rounded-full  text-sm font-medium text-black  focus:bg-black focus:text-white focus:outline-none ">
+            <span className="text-md">தமிழ்</span>
           </button>
         </div>
         <div className="ml-auto text-white font-bold">
@@ -23,7 +23,7 @@ const LanguageBar = () => {
         </div>
       </div>
 
-      <section class="relative  overflow-hidden bg-white py-4 px-8 ">
+      <div class="relative  overflow-hidden bg-white py-4 px-8 ">
         <div class="-mx-4 flex flex-wrap items-center">
           <div class="w-full px-4 lg:w-1/2 md:w-1/2">
             <div class="text-center lg:text-left ">
@@ -54,7 +54,7 @@ const LanguageBar = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

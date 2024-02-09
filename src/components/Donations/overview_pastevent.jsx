@@ -1,5 +1,6 @@
 import React from "react";
 import { Tabs } from "flowbite-react";
+import PastEvents from "./past_event_slider";
 
 const overview_pastevent = () => {
   return (
@@ -45,7 +46,11 @@ const overview_pastevent = () => {
             </Tabs>
           </div>
         </div>
+        <PastEvents/>
+        
       </div>
+      
+
     </div>
   );
 };
