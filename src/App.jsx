@@ -5,6 +5,7 @@ import Registration from './pages/Registration'
 import Donations from './pages/Donations'
 import Weather from './pages/Weather'
 import Contact from './pages/Contact'
+import News from './pages/News'
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Donations" element={<Donations/>} />
         <Route path="/Weather" element={<Weather/>} />
         <Route path="/Contact" element={<Contact/>} />
+        <Route path="/News" element={<News/>} />
 
       </Routes>
     </BrowserRouter>

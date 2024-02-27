@@ -44,7 +44,7 @@ const Navbar = () => {
     { link: "Home", path: "/" },
     { link: "Contacts", path: "/Contact" },
     { link: "Plan", path: "about" },
-    { link: "News", path: "product" },
+    { link: "News", path: "/News" },
     { link: "Donations", path: "/Donations" },
   ];
   return (

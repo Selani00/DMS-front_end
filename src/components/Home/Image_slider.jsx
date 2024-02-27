@@ -122,14 +122,14 @@ const Image_slider = () => {
         </div>
 
         <div className="absolute w-full h-8  top-5 px-5">
-          <div className="flex bg-white">
-            <div className="md:w-1/8 w-1/10 bg-red-600 h-full p-1 items-center flex justify-center">
-              <h1 className="font-bold px-3 text-lg text-white shadow-lg">
+          <div className="flex bg-white items-center">
+            <div className="md:w-1/8 w-1/10 bg-red-600 h-full  p-1 items-center flex justify-center">
+              <h1 className="font-bold px-3 md:text-lg text-base text-white shadow-lg">
                 Warnings
               </h1>
             </div>
             <div className="items-center flex justify-center px-3">
-              <p className="text-sm text-black ">
+              <p className="md:text-sm text-xs text-black ">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque
                 animi repellendus reiciendis, aperiam ut iure{" "}
               </p>
@@ -145,13 +145,4 @@ const Image_slider = () => {
 
 export default Image_slider;
 
-{
-  /* <div className=" max-w-screen-2xl lg-py-0 mx-0 min-h-screen h-screen">
-        <Carousel >
-          <img src={image1} alt=""  />
-          <img src={image2} alt=""  />
-          <img src={image3} alt=""  />
-          <img src={image4} alt=""  />
-        </Carousel>
-      </div> */
-}
+
