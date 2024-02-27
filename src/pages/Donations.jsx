@@ -4,6 +4,7 @@ import LanguageBar from "../components/Common/LanguageBar";
 import NavBar from "../components/Common/Navbar";
 import Footer from "../components/Common/Footer";
 import Overview from "../components/Donations/overview_pastevent";
+import Statistic from "../components/Donations/donation_statics";
 
 const Donations = () => {
   return (
@@ -27,6 +28,7 @@ const Donations = () => {
       </div>
 
     <Overview/>
+    <Statistic/>
     
     <Footer/>
     </div>

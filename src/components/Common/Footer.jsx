@@ -4,7 +4,7 @@ import { LuPhoneCall } from "react-icons/lu";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { HiOutlinePrinter } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
-import playStore from '../../assets/playStore.png';
+import playStore from '../../assets/Playstore.png';
 import AppStore from '../../assets/AppStore.png'
 import { FaFacebookF,FaWhatsapp,FaTwitter,FaTelegram ,FaInstagram } from "react-icons/fa";
 
