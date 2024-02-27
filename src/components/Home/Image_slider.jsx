@@ -137,11 +137,7 @@ const Image_slider = () => {
           </div>
         </div>
 
-        <div
-          className="absolute bottom-5 sm:right-8 right-4 z-[999] cursor-pointer text-4xl bg-red-600 w-16 h-16 flex items-center justify-center rounded-full animate-bounce"
-        >
-          <TbBellRingingFilled  style={{ color: 'white' }} />
-        </div>
+        
       </div>
     </div>
   );
