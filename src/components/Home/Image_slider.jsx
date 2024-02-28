@@ -123,7 +123,7 @@ const Image_slider = () => {
 
         <div className="absolute w-full h-8  top-5 px-5">
           <div className="flex bg-white items-center">
-            <div className="md:w-1/8 w-1/10 bg-red-600 h-full  p-1 items-center flex justify-center">
+            <div className="md:w-1/8 w-1/10 bg-gradient-to-br from-red-600 via-red-800 to-black h-full hover:bg-gradient-to-r p-1 items-center flex justify-center">
               <h1 className="font-bold px-3 md:text-lg text-base text-white shadow-lg">
                 Warnings
               </h1>
