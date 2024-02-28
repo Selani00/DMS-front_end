@@ -2,9 +2,9 @@ import React from "react";
 
 const Services = () => {
   const blogs = [
-    { id: 1, title: "Weather Forecast", image: "src/assets/News.png" },
-    { id: 2, title: "News", image: "src/assets/Weather.png" },
-    { id: 3, title: "Evacuation Routes", image: "src/assets/Map.png" },
+    { id: 1, title: "Weather Forecast", image: "src/assets/News.png" ,link:"/weather"},
+    { id: 2, title: "News", image: "src/assets/Weather.png",link:"/News"},
+    { id: 3, title: "Evacuation Routes", image: "src/assets/Map.png",link:"/weather"},
   ];
 
   return (
@@ -29,7 +29,7 @@ const Services = () => {
               </h3>
               <div className="flex items-center justify-center gap-8">
                 <a
-                  href=""
+                  href={blog.link}
                   className="font-bold text-primary hover:text-neutral-700"
                 >
                   More
