@@ -103,7 +103,7 @@ const News = () => {
       </form>
 
       {/* News Section */}
-      <div className="flex justify- py-5 px-5 gap-5">
+      <div className="flex justify-between py-5 px-5 gap-5">
         {/* left Section */}
         <div className="sm:w-2/3 bg-gray-200 ">
           <div className="px-5 py-3">
