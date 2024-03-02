@@ -18,8 +18,10 @@ const Donations = () => {
             <h2 className="text-5xl text-black font-semibold mb-4 md:w-4/5 my-5">
               Making a donation for your brothers and sisters.
             </h2>
+            <a href="/Donation_form">
+            <button  className="btn-primary my-10">Donate Now</button>
 
-            <button className="btn-primary my-10">Donate Now</button>
+            </a>
           </div>
           <div>
             <img src={Donation} alt="" className="w-100" />
