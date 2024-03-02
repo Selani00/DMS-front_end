@@ -12,9 +12,14 @@ import { VscFeedback } from "react-icons/vsc";
 
 const Slidebar = () => {
   const [nav, setNav] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const User_menuList = [
@@ -77,6 +82,8 @@ const Slidebar = () => {
         <IoLogOut className="w-15 h-15" />
         <h1 className="text-lg">Logout</h1>
       </div>
+
+      
     </div>
   );
 };
