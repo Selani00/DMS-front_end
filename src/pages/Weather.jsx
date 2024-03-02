@@ -45,7 +45,7 @@ const Weather = () => {
               type="text"
               id="simple-search"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-full focus:ring-gray-900 focus:border-gray-900 block w-full ps-12 p-2"
-              placeholder="Search ..."
+              placeholder="Search location..."
               required
             />
           </div>
@@ -79,76 +79,84 @@ const Weather = () => {
           </div>
 
           {/* Current daya weather details */}
-          <div className="absolute flex justify-between items-center top-10 w-full px-5">
+          <div className="absolute flex justify-between items-center top-10 w-full p-10">
             <div
-              className="w-2/3 bg-white rounded-lg  "
+              className="w-2/3 bg-white rounded-lg items-center "
               style={{ backgroundColor: "rgba(255, 255, 255, 0.40)" }}
             >
-              <div className="py-5">
-                <h1 className="text-black font-bold text-5xl px-5 mx-auto">
+              <div className="py-10">
+                <h1 className="text-black font-bold text-5xl px-5 mx-auto text-center">
                   Colombo
                 </h1>
 
                 <div className="flex justify-between gap-1 items-center p-5">
                   {/* first colum */}
-                  <div className="">
-                    <div>
-                      <h1>09:03</h1>
-                      <p>Thursday, 31 Aug</p>
+                  <div className="px-5">
+                    <div className=" text-center mx-auto py-5">
+                      <h1 className="text-gray-700 text-4xl">09:03</h1>
+                      <p className="text-black text-sm">Thursday, 31 Aug</p>
                     </div>
 
-                    <div>
-                      <h1>24°C</h1>
-                      <p>Feels like:22°C</p>
+                    <div className="text-center py-5 mx-auto">
+                      <h1 className="text-black text-5xl font-bold">24°C</h1>
+                      <p className="text-gray-700 text-sm">
+                        Feels like:
+                        <span className="font-bold text-black">22°C</span>
+                      </p>
                     </div>
-                    <div>
-                      <div className="flex justify-center items-center">
+
+                    <div className="item-center py-5 px-auto">
+                      <div className="flex justify-center items-center gap-3">
                         <img src={sunset} alt="" />
-                        <div>
-                          <h3>Sunrise</h3>
-                          <p>06:37 AM</p>
+                        <div className="text-start">
+                          <h3 className="text-gray-700 font-semibold">
+                            Sunrise
+                          </h3>
+                          <p className="text-black text-semibold">06:37 AM</p>
                         </div>
                       </div>
-                      <div className="flex justify-center items-center">
+                      <div className="flex justify-center items-center gap-3 pt-3">
                         <img src={sunrise} alt="" />
-                        <div>
-                          <h3>Sunset</h3>
-                          <p>06:37 PM</p>
+                        <div className="text-start">
+                          <h3 className="text-gray-700 font-semibold">
+                            Sunset
+                          </h3>
+                          <p className="text-black text-semibold">06:37 PM</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   {/* Middle column */}
-                  <div className="item-center">
-                    <h1>Sunny</h1>
-                    <img src={sun} alt="" />
+                  <div className="text-center pt-20 items-center">
+                    <h1 className="font-bold text-4xl">Sunny</h1>
+                    <img src={sun} alt="" className="w-60 h-60" />
                   </div>
 
                   {/* last column */}
-                  <div>
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <img src={humidity} alt="" />
-                        <p>41%</p>
-                        <p>Humidity</p>
+                  <div className="p-10">
+                    <div className="flex justify-between items-center gap-10 py-5">
+                      <div className="text-center">
+                        <img src={humidity} alt="" className="w-15 h-15" />
+                        <p className="font-bold mt-3">41%</p>
+                        <p className="text-xs font-semibold">Humidity</p>
                       </div>
-                      <div>
-                        <img src={pressure} alt="" />
-                        <p>41%</p>
-                        <p>Humidity</p>
+                      <div className="text-center">
+                        <img src={pressure} alt="" className="w-15 h-15" />
+                        <p className="font-bold mt-3">41%</p>
+                        <p className="text-xs font-semibold">Humidity</p>
                       </div>
                     </div>
                     <div className="flex justify-between items-center">
-                      <div>
-                        <img src={wind} alt="" />
-                        <p>41%</p>
-                        <p>Humidity</p>
+                      <div className="text-center">
+                        <img src={wind} alt="" className="w-15 h-15" />
+                        <p className="font-bold mt-3">41%</p>
+                        <p className="text-xs font-semibold">Humidity</p>
                       </div>
-                      <div>
-                        <img src={uv} alt="" />
-                        <p>41%</p>
-                        <p>Humidity</p>
+                      <div className="text-center">
+                        <img src={uv} alt="" className="w-15 h-15" />
+                        <p className="font-bold mt-3">41%</p>
+                        <p className="text-xs font-semibold">Humidity</p>
                       </div>
                     </div>
                   </div>
@@ -160,16 +168,36 @@ const Weather = () => {
               className="bg-white rounded-lg mr-10"
               style={{ backgroundColor: "rgba(255, 255, 255, 0.40)" }}
             >
-              <div className="p-5">
-                <h1 className="text-black text-3xl font-bold">Hourly Forecast</h1>
+              <div className="p-10">
+                <h1 className="text-black text-3xl font-bold py-5">
+                  Hourly Forecast
+                </h1>
                 <div>
-                  <div className="flex justify-between items-center">
-                    <img src={sun} alt="" className="w-10 h-10"/>
+                  <div className="flex justify-between items-center py-3">
+                    <img src={sun} alt="" className="w-10 h-10" />
                     <p>20°C</p>
                     <p>12:00AM</p>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <img src={sun} alt="" className="w-10 h-10"/>
+                  <div className="flex justify-between items-center text-base text-center py-3">
+                    <img src={sun} alt="" className="w-10 h-10" />
+                    <p>20°C</p>
+                    <p>12:00AM</p>
+                  </div>
+
+                  <div className="flex justify-between items-center text-base text-center py-3">
+                    <img src={sun} alt="" className="w-10 h-10" />
+                    <p>20°C</p>
+                    <p>12:00AM</p>
+                  </div>
+
+                  <div className="flex justify-between items-center text-base text-center py-3">
+                    <img src={sun} alt="" className="w-10 h-10" />
+                    <p>20°C</p>
+                    <p>12:00AM</p>
+                  </div>
+
+                  <div className="flex justify-between items-center text-base text-center">
+                    <img src={sun} alt="" className="w-10 h-10" />
                     <p>20°C</p>
                     <p>12:00AM</p>
                   </div>
@@ -179,28 +207,83 @@ const Weather = () => {
           </div>
         </div>
 
-        <div>
-          <h1>7 days weather forcast</h1>
-          <div className="flex justify-between items-center">
-            <div>
-              <h3>3 sep</h3>
-              <img src={sun} alt="" className="w-10 h-10"/>
-              <p>20°C</p>
-              <img src={wind} alt="" className="w-10 h-10"/>
-              <p>3km/h</p>
+        <div className="bg-white rounded-xl shadow-2xl px-10 md:mx-40 py-5 my-10">
+          <h1 className="text-center font-bold text-primary text-3xl">
+            7 days weather forcast
+          </h1>
+          <div className="flex justify-center md:gap-12 gap-6 items-center py-5 font-bold">
+            <div className="items-center text-center">
+              <div className="bg-gray-500 p-5 rounded-full">
+                <h3>3 sep</h3>
+                <img src={sun} alt="" className="w-10 h-10" />
+                <p>20°C</p>
+                <img src={wind} alt="" className="w-10 h-10" />
+                <p>3km/h</p>
+              </div>
 
-              <h2>Monday</h2>
+              <h2 className="py-3">Monday</h2>
             </div>
 
-            <div>
-              <h3>3 sep</h3>
-              <img src={sun} alt="" className="w-10 h-10"/>
-              <p>20°C</p>
-              <img src={wind} alt="" className="w-10 h-10"/>
-              <p>3km/h</p>
+            <div className="items-center text-center">
+              <div className="bg-gray-500 p-5 rounded-full">
+                <h3>3 sep</h3>
+                <img src={sun} alt="" className="w-10 h-10" />
+                <p>20°C</p>
+                <img src={wind} alt="" className="w-10 h-10" />
+                <p>3km/h</p>
+              </div>
 
-              <h2>Monday</h2>
+              <h2 className="py-3">Tuesday</h2>
             </div>
+
+            <div className="items-center text-center">
+              <div className="bg-gray-500 p-5 rounded-full">
+                <h3>3 sep</h3>
+                <img src={sun} alt="" className="w-10 h-10" />
+                <p>20°C</p>
+                <img src={wind} alt="" className="w-10 h-10" />
+                <p>3km/h</p>
+              </div>
+
+              <h2 className="py-3">Wednesday</h2>
+            </div>
+
+            <div className="items-center text-center">
+              <div className="bg-gray-500 p-5 rounded-full">
+                <h3>3 sep</h3>
+                <img src={sun} alt="" className="w-10 h-10" />
+                <p>20°C</p>
+                <img src={wind} alt="" className="w-10 h-10" />
+                <p>3km/h</p>
+              </div>
+
+              <h2 className="py-3">Thursday</h2>
+            </div>
+
+            <div className="items-center text-center">
+              <div className="bg-gray-500 p-5 rounded-full">
+                <h3>3 sep</h3>
+                <img src={sun} alt="" className="w-10 h-10" />
+                <p>20°C</p>
+                <img src={wind} alt="" className="w-10 h-10" />
+                <p>3km/h</p>
+              </div>
+
+              <h2 className="py-3">Friday</h2>
+            </div>
+
+            <div className="items-center text-center">
+              <div className="bg-gray-500 p-5 rounded-full">
+                <h3>3 sep</h3>
+                <img src={sun} alt="" className="w-10 h-10" />
+                <p>20°C</p>
+                <img src={wind} alt="" className="w-10 h-10" />
+                <p>3km/h</p>
+              </div>
+
+              <h2 className="py-3">Saturday</h2>
+            </div>
+
           </div>
         </div>
       </div>

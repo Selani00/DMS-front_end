@@ -7,6 +7,7 @@ import Weather from './pages/Weather'
 import Contact from './pages/Contact'
 import News from './pages/News'
 import SafetyTips from './pages/SafetyTips'
+import UHome from "./pages/Dashboard/User_home"
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/Contact" element={<Contact/>} />
         <Route path="/News" element={<News/>} />
         <Route path="/SafetyTips" element={<SafetyTips/>} />
+        <Route path="/User_home" element={<UHome/>} />
 
       </Routes>
     </BrowserRouter>
