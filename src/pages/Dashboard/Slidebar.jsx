@@ -38,9 +38,9 @@ const Slidebar = () => {
     <div
       className={`${
         !nav ? "w-[200px]" : "w-30"
-      } h-screen bg-primary  relative duration-300`}
+      } h-screen bg-primary  relative duration-300 container`}
     >
-      <div
+      {/* <div
         onClick={handleNav}
         className={`text-gray-600 bg-gray-200 border-gray-800 w-10 h-10 flex items-center justify-center text-xl 
             rounded-full absolute top-7 right-[-15px] ${
@@ -48,7 +48,7 @@ const Slidebar = () => {
             } duration-300`}
       >
         <FaArrowRight />
-      </div>
+      </div> */}
       <a href="/">
         <div className="flex items-center text-2xl gap-4 p-2 text-white cursor-pointer border-b border-white font-semibold">
           <div className="bg-white w-20 h-20 rounded-full flex justify-center items-center">

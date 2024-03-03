@@ -12,6 +12,7 @@ import Emergancy_form from "./pages/Dashboard/Emergancy_form"
 import UProfile from "./pages/Dashboard/Profile"
 import Volunteering_form from "./pages/Dashboard/Volunteering"
 import Donation_form from "./pages/Dashboard/Donation_form"
+import UDashboard from "./pages/Dashboard/Dashbord"
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/Emergancy_form" element={<Emergancy_form/>} />
         <Route path="/Volunteering_form" element={<Volunteering_form/>} />
         <Route path="/Donation_form" element={<Donation_form/>} />
+        <Route path="/UDashboard" element={<UDashboard/>} />
       </Routes>
     </BrowserRouter>
   )

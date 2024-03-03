@@ -31,6 +31,11 @@ export default {
     },
   },
   plugins: [require('flowbite/plugin',"tw-elements/dist/plugin.cjs")],
+  variants:{
+    extend:{
+      display:["focus-group"]
+    }
+  }
 
 }
 
