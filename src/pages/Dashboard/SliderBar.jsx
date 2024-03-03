@@ -25,6 +25,7 @@ const SiderBar = ({sidebarToggle,setSidebarToggle}) => {
         { icon: <VscFeedback  className="inline-block w-6 h-6 mr-2 -mt-2"/>, label: "Feedback", link: "/User_home" },
       ];
 
+
     return(
         <div className={`${sidebarToggle? "hidden" :"w-64"} bg-primary fixed h-full px-4 py-2`}>
             <div className="my-2 mb-2">
