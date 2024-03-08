@@ -6,7 +6,7 @@ const main = () => {
   const [sidebarToggle,setSidebarToggle]=useState(false);
   return (
     <div>
-        <div className='flex  '>
+        <div className='flex top-0 z-[999] fixed w-full'>
             <Slidebar sidebarToggle={sidebarToggle}/>
             <Dashboard sidebarToggle={sidebarToggle}
             

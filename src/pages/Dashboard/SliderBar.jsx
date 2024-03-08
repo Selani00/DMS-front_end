@@ -27,7 +27,7 @@ const SiderBar = ({sidebarToggle}) => {
 
 
     return(
-        <div className={`${sidebarToggle? "hidden" :"block"} bg-primary fixed h-full px-4 py-2`}>
+        <div className={`${sidebarToggle? "hidden" :"block"} bg-primary fixed h-full px-4 py-2 w-64`}>
             <div className="my-2 mb-2">
                 <h1 className="text-2xl font-bold text-white">User Dashboard</h1>
             </div>

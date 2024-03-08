@@ -1,9 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import { FaBars,FaSearch,FaBell,FaUserCircle    } from "react-icons/fa";
 
 const User_Nav = ({setSidebarToggle,sidebarToggle}) => {
     return (
-        <nav className={`${sidebarToggle?"ml-0":"ml-64"}  bg-primary px-4 py-3 flex justify-between w-full` } >
+        <nav className="bg-primary px-4 py-3 flex justify-between">
             <div className="flex items-center md:text-xl text-base">
                 <FaBars className="text-white me-4 cursor-pointer" onClick={()=>setSidebarToggle(!sidebarToggle)}/>
                 <span className="text-white font-semibold">Disaster Management System</span>
