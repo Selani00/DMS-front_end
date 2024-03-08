@@ -10,7 +10,7 @@ import { IoPersonCircle, IoChatbubbles, IoLogOut } from "react-icons/io5";
 import { MdPayments } from "react-icons/md";
 import { VscFeedback } from "react-icons/vsc";
 
-const SiderBar = ({sidebarToggle,setSidebarToggle}) => {
+const SiderBar = ({sidebarToggle}) => {
 
     const User_menuList = [
         { icon: <IoPersonCircle className="inline-block w-6 h-6 mr-2 -mt-2"/>, label: "Profile",link: "/Profile"},
@@ -27,7 +27,7 @@ const SiderBar = ({sidebarToggle,setSidebarToggle}) => {
 
 
     return(
-        <div className={`${sidebarToggle? "hidden" :"w-64"} bg-primary fixed h-full px-4 py-2`}>
+        <div className={`${sidebarToggle? "hidden" :"block"} bg-primary fixed h-full px-4 py-2`}>
             <div className="my-2 mb-2">
                 <h1 className="text-2xl font-bold text-white">User Dashboard</h1>
             </div>
