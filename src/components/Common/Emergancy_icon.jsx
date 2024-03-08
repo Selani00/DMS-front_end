@@ -3,7 +3,7 @@ import { TbBellRingingFilled } from "react-icons/tb";
 
 const Emergancy_icon = () => {
   return (
-    <a href="/User_Main">
+    <a href="/Emergancy">
       <div className="fixed bottom-5 sm:right-8 right-4 z-[999] cursor-pointer text-4xl bg-red-600 w-11 h-11 md:w-16 md:h-16 flex items-center justify-center rounded-full animate-bounce">
         <TbBellRingingFilled
           style={{ color: "white" }}

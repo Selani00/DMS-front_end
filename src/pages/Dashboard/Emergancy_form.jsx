@@ -1,5 +1,6 @@
 import { useState } from "react";
-import main_U from "./main";
+import sideBar from "./SliderBar";
+import User_Nav from "./User_Nav";
 import { FaMapMarkedAlt } from "react-icons/fa";
 
 const emergancy_form = () => {
@@ -9,7 +10,6 @@ const emergancy_form = () => {
 
   return (
     <div>
-      <main_U />
       {/* When toggle the nav bar this is not toggle . Need to fix it */}
       <div
         className={`${

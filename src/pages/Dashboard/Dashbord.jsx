@@ -1,6 +1,7 @@
 import { useState } from "react";
 import User_Nav from "./User_Nav";
 
+
 const Dashboard = ({sidebarToggle,setSidebarToggle}) => { 
     
     return(
@@ -8,6 +9,7 @@ const Dashboard = ({sidebarToggle,setSidebarToggle}) => {
             
             <User_Nav sidebarToggle={sidebarToggle}           
             setSidebarToggle={setSidebarToggle}/>
+            
 
             
         </div>

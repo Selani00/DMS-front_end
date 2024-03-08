@@ -15,7 +15,7 @@ import Donation_form from "./pages/Dashboard/Donation_form"
 import UDashboard from "./pages/Dashboard/Dashbord"
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import User_Main from "./pages/Dashboard/main";
-
+import Emergancy from './Forms/Emergancy'
 
 
 
@@ -35,11 +35,12 @@ function App() {
         <Route path="/SafetyTips" element={<SafetyTips/>} />
         <Route path="/User_home" element={<UHome/>} />
         <Route path="/UProfile" element={<UProfile/>} />
-        <Route path="/Emergancy_form" element={<Emergancy_form/>} />
+        <Route path="/Emergancy" element={<Emergancy/>} />
         <Route path="/Volunteering_form" element={<Volunteering_form/>} />
         <Route path="/Donation_form" element={<Donation_form/>} />
         <Route path="/UDashboard" element={<UDashboard/>} />
         <Route path="/User_Main" element={<User_Main/>} />
+
       </Routes>
     </BrowserRouter>
   )
