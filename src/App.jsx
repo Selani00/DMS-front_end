@@ -8,10 +8,9 @@ import Contact from './pages/Contact'
 import News from './pages/News'
 import SafetyTips from './pages/SafetyTips'
 import UHome from "./pages/Dashboard/User_home"
-import Emergancy_form from "./pages/Dashboard/Emergancy_form"
 import UProfile from "./pages/Dashboard/Profile"
-import Volunteering_form from "./pages/Dashboard/Volunteering"
-import Donation_form from "./pages/Dashboard/Donation_form"
+import Volunteering_form from "./Forms/Volunteering"
+import Donation_form from "./Forms/Donation_form"
 import UDashboard from "./pages/Dashboard/Dashbord"
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import User_Main from "./pages/Dashboard/main";

@@ -15,7 +15,7 @@ const More_from_us = () => {
       description:
         "Give your support  to the people in need during Emergencies.",
       image: "/src/assets/Volunteering.png",
-      link: "/Donations",
+      link: "/Volunteering_form",
     },
     {
       id: 3,

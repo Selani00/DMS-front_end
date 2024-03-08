@@ -1,19 +1,13 @@
 import { FaMapMarkedAlt,FaMicrophone } from "react-icons/fa";
 import { IoCaretBackSharp } from "react-icons/io5";
+import BackButton from "../components/Common/BackButton";
 
 
 const Emergancy = () => {
   return (
     <div>
       <div className="p-5">
-        <a href="/">
-          <button className="bg-primary px-4 py-2 rounded-lg text-white font-semibold ">
-            <div className="flex gap-2 items-center ">
-              <IoCaretBackSharp className="w-6 h-6" />
-              <h1>Back</h1>
-            </div>
-          </button>
-        </a>
+        <BackButton />
       </div>
       <div
         className="
