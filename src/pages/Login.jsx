@@ -1,18 +1,22 @@
 import React, { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link} from "react-router-dom";
+
 import GoogleImg from "../assets/google.png";
 import axios from "axios";
 import { message } from "antd";
 
+
 import Back from "../components/Common/BackButton";
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  
  
-
   const handleLogin = async (e) => {
     e.preventDefault();
+    
     try {
       const response = await axios.post(
         "http://localhost:5000/api/users/login",
@@ -21,21 +25,27 @@ const Login = () => {
           password: password,
         }
       );
-      
+   
+      localStorage.setItem('user',JSON.stringify(response));
+    
       message.success("Login success");
+      setEmail("");
+      setPassword("");
+      
+      window.location.href = "/"
+
        
     } catch (error) {
-      setError(error);
-      message.error("Login failed" + error);
+      
+      message.error("Login failed : " + error);
     }
   };
 
- 
-    
+  
   
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto p-5 md:p-0">
       
       <div className="py-2 px-0">
         <Back/>
@@ -51,10 +61,12 @@ const Login = () => {
           <div class="relative my-5">
             <input
               type="email"
+              value={email}
               class="peer m-0 block h-[58px] w-full rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-4 text-base font-normal leading-tight text-neutral-700 transition duration-200 ease-linear placeholder:text-transparent focus:border-black focus:pb-[0.625rem] focus:pt-[1.625rem] focus:text-neutral-700 focus:outline-none peer-focus:text-black [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem]"
               id="floatingInput"
               placeholder="name@example.com"
               onChange={(e) => setEmail(e.target.value)}
+
             />
             <label
               for="floatingInput"
@@ -67,6 +79,7 @@ const Login = () => {
           <div class="relative mt-5 mb-8">
             <input
               type="password"
+              value={password}
               class="peer m-0 block h-[58px] w-full rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-4 text-base font-normal leading-tight text-neutral-700 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary focus:pb-[0.625rem] focus:pt-[1.625rem] focus:text-neutral-700 focus:shadow-te-primary focus:outline-none peer-focus:text-primary  [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem]"
               id="floatingPassword"
               placeholder="Password"

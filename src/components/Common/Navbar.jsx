@@ -2,23 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import { FaXmark, FaBars } from "react-icons/fa6";
-import {
-  Button,
-  Dialog,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Input,
-  Checkbox,
-} from "@material-tailwind/react";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
+  const [user,setUser]=useState();
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -33,12 +25,23 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    
+
+  setUser(localStorage.getItem('user')?JSON.parse(localStorage.getItem('user')):null);
+    
+   
+
+  window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.addEventListener("scroll", handleScroll);
     };
   });
+
+  const logout = () => {
+    localStorage.removeItem('user');
+    window.location.href = "/"
+  }
 
   const navItems = [
     { link: "Home", path: "/" },
@@ -47,6 +50,8 @@ const Navbar = () => {
     { link: "News", path: "/News" },
     { link: "Donations", path: "/Donations" },
   ];
+
+
   return (
     <div className="bg-primary text-x1 container mx-auto  md:px-14 p-1 max-w-full">
       <div className="flex justify-between items-center">
@@ -61,79 +66,36 @@ const Navbar = () => {
         </div>
 
         <div className="items-center">
-          <>
-            <RouterLink to="/Login">
-              <button
-                className="relative inline-flex items-center justify-center px-2 overflow-hidden text-base font-semibold text-white rounded-lg border-white border-2"
-              >
-                <span class="relative px-5 py-1.5 transition duration-300 hover:scale-125 ">
-                  Sign In
-                </span>
-              </button>
-            </RouterLink>
-            <Dialog
-              size="xs"
-              open={open}
-              handler={handleOpen}
-              className="bg-transparent shadow"
-            >
-              <Card className="mx-auto w-full max-w-[24rem]">
-                <CardBody className="flex flex-col gap-4">
-                  <Typography variant="h4" color="blue-gray">
-                    Sign In
-                  </Typography>
-                  <h1></h1>
-                  <Typography
-                    className="mb-3 font-normal"
-                    variant="paragraph"
-                    color="gray"
-                  >
-                    Enter your email and password to Sign In.
-                  </Typography>
-                  <Typography className="-mb-2" variant="h6">
-                    Your Email
-                  </Typography>
-                  <Input label="Email" size="lg" />
-                  <Typography className="-mb-2" variant="h6">
-                    Your Password
-                  </Typography>
-                  <Input label="Password" size="lg" />
-                  <div className="-ml-2.5 -mt-3">
-                    <Checkbox label="Remember Me" />
-                  </div>
-                </CardBody>
-                <CardFooter className="pt-0">
-                  <Button variant="gradient" onClick={handleOpen} fullWidth>
-                    Sign In
-                  </Button>
-                  <Typography
-                    variant="small"
-                    className="mt-4 flex justify-center"
-                  >
-                    Don&apos;t have an account?
-                    <Typography
-                      as="a"
-                      href="#signup"
-                      variant="small"
-                      color="blue-gray"
-                      className="ml-1 font-bold"
-                      onClick={handleOpen}
-                    >
-                      Sign up
-                    </Typography>
-                  </Typography>
-                </CardFooter>
-              </Card>
-            </Dialog>
-          </>
+          {!user? 
+          <RouterLink to="/Login">
+           
+          <button className="relative inline-flex items-center justify-center px-2 overflow-hidden text-base font-semibold text-white rounded-lg border-white border-2">
+            <span class="relative px-5 py-1.5 transition duration-300 hover:scale-125 ">
+              
+              Sign In
+            </span>
+          </button>
+        </RouterLink>
+          : 
+          
+           
+          <button className="relative inline-flex items-center justify-center px-2 overflow-hidden text-base font-semibold text-white rounded-lg border-white border-2" onClick={logout}>
+            <span class="relative px-5 py-1.5 transition duration-300 hover:scale-125 ">
+              
+              log out
+            </span>
+          </button>
+       
+          }
+          
         </div>
 
         {/* menu button for small devices-mobile */}
 
-        <div className="md:hidden">
+        <div className="md:hidden ">
           <button
             onClick={toggleMenu}
-            className="text-NeutralDGrey focus:outline-none focus:test-gray-500 "
+            className="text-white focus:outline-none focus:test-gray-500 "
           >
             {isMenuOpen ? (
               <FaXmark className="h-6 w-6 " />

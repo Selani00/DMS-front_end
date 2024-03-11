@@ -1,9 +1,57 @@
 import { FaMapMarkedAlt,FaMicrophone } from "react-icons/fa";
-import { IoCaretBackSharp } from "react-icons/io5";
+import { useState } from "react";
+import axios from "axios";
 import BackButton from "../components/Common/BackButton";
+import {message} from "antd";
 
 
 const Emergancy = () => {
+  const [disasterType, setDisasterType] = useState("");
+  const [disasterLocation, setDisasterLocation] = useState("");
+  const [peopleEffected, setPeopleEffected] = useState(0);
+  const [medicalSupport, setMedicalSupport] = useState(false);
+  const [otherNeeds, setOtherNeeds] = useState("");
+
+  
+  
+  const handleSubmit = async(e) =>{
+    e.preventDefault();
+    
+    try {
+      await axios.post(
+        "http://localhost:5000/api/requests/request",
+        {
+          disasterType:disasterType,
+          disasterLocation: disasterLocation,
+          peopleEffected: peopleEffected,
+          medicalSupport: medicalSupport,
+          otherNeeds: otherNeeds
+        }
+      );
+
+      
+
+      message.success("Request send  successfully");
+
+      setDisasterType("");
+      setDisasterLocation("");
+      setPeopleEffected("");
+      setMedicalSupport("");
+      setOtherNeeds("");
+
+    } catch (error) {
+      
+      message.error("Error: " + error.message);
+      console.log(error);
+    }
+  };
+
+  const handleMedicalSupportChange = (e) => {
+    const isChecked = e.target.checked;
+    setMedicalSupport(isChecked);
+    
+  };
+
   return (
     <div>
       <div className="p-5">
@@ -26,7 +74,7 @@ const Emergancy = () => {
               <input
                 type="text"
                 id="name"
-                required
+                
                 class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2 "
               ></input>
             </div>
@@ -37,7 +85,8 @@ const Emergancy = () => {
                 <input
                   type="search"
                   id="search"
-
+                  value={disasterLocation}
+                  onChange={(e)=>setDisasterLocation(e.target.value)}
                   class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2 "
                   placeholder="Search"
                   required
@@ -61,6 +110,8 @@ const Emergancy = () => {
               id="emergency_type"
               class="bg-gray-50 border border-gray-300text-gray-900 text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2.5 "
                 required
+                onChange={(e) => setDisasterType(e.target.value)}
+                value={disasterType}
             >
               <option>Flood</option>
               <option>Tsunami</option>
@@ -74,15 +125,18 @@ const Emergancy = () => {
               <label className="block mb-1 ">No of people effected</label>
               <select
                 id="No_of_people_effected"
+                value={peopleEffected}
                 class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2 "
+                required
+                onChange={(e) => setPeopleEffected(e.target.value)}
+
               >
-                <option>Only me</option>
-                <option>Two</option>
-                <option>3-10</option>
-                <option>10-20</option>
-                <option>more than 20</option>
-                <option>more than 100</option>
-                <option>Not Sure, but many</option>
+                <option>1</option>
+                <option>2</option>
+                <option>10</option>
+                <option>20</option>
+                <option>50</option>
+                
               </select>
             </div>
 
@@ -92,9 +146,12 @@ const Emergancy = () => {
                   id="country-option-1"
                   type="radio"
                   name="countries"
-                  value="USA"
+                  value={medicalSupport}
                   class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 "
-                  checked
+                  checked={medicalSupport}
+                  
+                  onChange={handleMedicalSupportChange}
+                  
                 />
                 <label className="block ms-2 text-xs md:text-base ">
                   Need medical support
@@ -178,13 +235,16 @@ const Emergancy = () => {
             <textarea
               id="message"
               rows="4"
+              value={otherNeeds}
               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-black focus:border-black "
               placeholder="If you need any special thing to say..."
+              onChange={(e)=>setOtherNeeds(e.target.value)}
             ></textarea>
           </div>
 
           <div className="flex items-center justify-center mt-5 px-5">
-            <button className="bg-primary py-2 px-10 w-full text-white text-bold text-xl rounded-2xl">
+            <button className="bg-primary py-2 px-10 w-full text-white text-bold text-xl rounded-2xl"
+            onClick={handleSubmit}>
               Submit
             </button>
           </div>

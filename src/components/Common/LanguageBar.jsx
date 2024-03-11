@@ -26,17 +26,17 @@ const LanguageBar = () => {
       <div class="relative  overflow-hidden bg-white py-4 px-8 ">
         <div class="-mx-4 flex flex-wrap items-center">
           <div class="w-full px-4 lg:w-1/2 md:w-1/2">
-            <div class="text-center lg:text-left ">
+            <div class="text-center ">
               <a
                 href="/"
-                className="lg:text-3xl text-2xl italic font-medium flex items-center space-x-3 text-primary"
+                className="lg:text-3xl text-xl italic font-medium flex items-center space-x-3 text-primary"
               >
                 <img src={logo} alt="" className="w-20 ini" />
                 <span>Disaster Management Center</span>
               </a>
             </div>
           </div>
-          <div class="relative w-full lg:w-1/2 md:w-1/2 mt-5 px-10">
+          <div class="relative w-full lg:w-1/2 md:w-1/2 mt-5 px-10 hidden md:block">
             <div class="text-center lg:text-right relative ">
               <i class="absolute text-black top-1/2 transform -translate-y-1/2 left-4">
                 <FaSearch />
