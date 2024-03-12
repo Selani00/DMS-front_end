@@ -1,54 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import LanguageBar from "../components/Common/LanguageBar";
 import Navbar from "../components/Common/Navbar";
 import Footer from "../components/Common/Footer";
 import Emergancy from "../components/Common/Emergancy_icon";
 import image from "../assets/Footer.png";
-import image2 from "../assets/about.png";
+
+import News_Items from "../components/News/News_Items";
 
 const News = () => {
-  const news_list = [
-    {
-      id: 1,
-      heading: "This is news heading 1",
-      Auther: "Auther",
-      date: "31 Dec 2023",
-      time: "8AM",
-      image: image,
-      news_body:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
-    },
-    {
-      id: 1,
-      heading: "This is news heading 2",
-      Auther: "Auther 2",
-      date: "31 Dec 2023",
-      time: "8AM",
-      image: image2,
-      news_body:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
-    },
-    {
-      id: 1,
-      heading: "This is news heading 3",
-      Auther: "Auther 3",
-      date: "31 Dec 2023",
-      time: "8AM",
-      image: image,
-      news_body:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
-    },
-    {
-      id: 1,
-      heading: "This is news heading 4",
-      Auther: "Auther 4",
-      date: "31 Dec 2023",
-      time: "8AM",
-      image: image2,
-      news_body:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
-    },
-  ];
+  const [selectedNews,setNewsSelected]=useState(null);
+
+  const handleSelectNews=(news)=>{
+    setNewsSelected(news);
+  };
+  
   return (
     <>
       <LanguageBar />
@@ -107,46 +72,33 @@ const News = () => {
         {/* left Section */}
         <div className="sm:w-2/3 bg-gray-200 ">
           <div className="px-5 py-3">
-            <h1 className="text-primary font-bold md:text-3xl text-lg">
-              Colombo residents should be vigilant on COVID and other diseases:
-              CMC
-            </h1>
-            <p className="my-3 text-base">By Auther</p>
-            <div className="w-1/4 flex justify-between text-xs text-gray-500">
-              <p>31 Dec 2023 </p>
-              <p>8AM</p>
-            </div>
+            {selectedNews && (
+              <div>
+                <h1 className="text-primary font-bold md:text-3xl text-lg">
+                  {selectedNews.heading}
+                </h1>
+                <p className="my-3 text-base">{selectedNews.Auther}</p>
+                <div className="w-1/4 flex justify-between text-xs text-gray-500">
+                  <p>{selectedNews.date}</p>
+                  <p>{selectedNews.time}</p>
+                </div>
 
-            <div className="mt-5">
-              <img src={image} alt="" className="object-cover w-full h-full" />
-            </div>
+                <div className="mt-5">
+                  <img src={selectedNews.image? selectedNews.image:image} alt="" className="object-cover w-full h-full" />
+                </div>
 
-            <div className="mt-3">
-              <p className="text-black text-sm leading-7">
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text. It has roots in a piece of classical Latin literature from
-                45 BC, making it over 2000 years old. Richard McClintock, a
-                Latin professor at Hampden-Sydney College in Virginia, looked up
-                one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in
-                classical literature, discovered the undoubtable source. Lorem
-                Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
-                written in 45 BC. This book is a treatise on the theory of
-                ethics, very popular during the Renaissance.
-                <br />
-                The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
-                comes from a line in section 1.10.32. The standard chunk of
-                Lorem Ipsum used since the 1500s is reproduced below for those
-                interested. Sections 1.10.32 and 1.10.33 from "de Finibus
-                Bonorum et Malorum" by Cicero are also reproduced in their exact
-                original form, accompanied by English versions from the 1914
-                translation by H. Rackham.
-              </p>
-            </div>
+                <div className="mt-3">
+                  <p className="text-black text-sm leading-7">
+                    {selectedNews.news_body}
+                  </p>
+                </div>         
+              </div>
+
+            )}
+          </div>
 
             {/* Prev and Next Button */}
-            <div className="flex justify-between my-10 mx-5">
+          <div className="flex justify-between my-10 mx-5">
               <button
                 type="button"
                 className="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm md:px-5 px-2.5 py-2.5 text-center inline-flex items-center"
@@ -191,50 +143,14 @@ const News = () => {
                 </svg>
               </button>
             </div>
-          </div>
         </div>
+        
 
         {/* Right Section */}
         <div className="w-1/3 border border-black">
-          <div className="px-2 py-2">
-            <h1 className="text-primary font-bold md:text-2xl text-lg py-3">              
-              More News
-            </h1>
-
-            {/* News item */}
-            <div>
-              {news_list.map((news, i) => (
-                <div className="flex items-center justify-start gap-2 bg-gray-200 h-20 my-2">
-                  <div className="w-1/3   py-0 h-full">
-                    <img
-                      src={news.image}
-                      alt=""
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
-                  <div className="mr-2 py-2">
-                    <h1 className="font-semibold text-black text-base">
-                      {news.heading}
-                    </h1>
-
-                    <div className=" mt-3 flex justify-between text-xs">
-                      <p className="text-black">{news.Auther}</p>
-                      <p className="text-gray-800">{news.date}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="my-3">
-              <button
-                type="button"
-                className="text-white w-full bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold rounded-sm text-base px-5 py-2 me-2 mb-2  focus:outline-none "
-              >
-                View More
-              </button>
-            </div>
-          </div>
+          <News_Items onSelectedNews={(value) => {
+            handleSelectNews(value);
+          }}/>
         </div>
       </div>
 
