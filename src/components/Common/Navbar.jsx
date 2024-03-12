@@ -76,12 +76,9 @@ const Navbar = () => {
             </span>
           </button>
         </RouterLink>
-          : 
-          
-           
+          :     
           <button className="relative inline-flex items-center justify-center px-2 overflow-hidden text-base font-semibold text-white rounded-lg border-white border-2" onClick={logout}>
-            <span class="relative px-5 py-1.5 transition duration-300 hover:scale-125 ">
-              
+            <span class="relative px-5 py-1.5 transition duration-300 hover:scale-125 ">             
               log out
             </span>
           </button>

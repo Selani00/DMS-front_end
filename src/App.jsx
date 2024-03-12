@@ -30,9 +30,7 @@ function App() {
         <Route path="/Weather" element={<Weather/>} />
         <Route path="/Contact" element={<Contact/>} />
         <Route path="/News" element={<News/>} />
-        <Route path="/SafetyTips" element={<SafetyTips/>} />
-      
-      
+        <Route path="/SafetyTips" element={<SafetyTips/>} />    
         <Route path="/Emergancy" element={<Emergancy/>} />
         <Route path="/Volunteering_form" element={<Volunteering_form/>} />
         <Route path="/Donation_form" element={<Donation_form/>} />
