@@ -50,7 +50,7 @@ const News = () => {
     },
   ];
   return (
-    <div>
+    <>
       <LanguageBar />
       <Navbar />
       <Emergancy/>
@@ -166,14 +166,14 @@ const News = () => {
                     d="M1 5h12m0 0L9 1m4 4L9 9"
                   />
                 </svg>
-                <span className="hidden sm:inline ">Choose plan</span>
+                <span className="hidden sm:inline ">Previous</span>
               </button>
 
               <button
                 type="button"
                 className="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm md:px-5 px-2.5 py-2.5 text-center inline-flex items-center "
               >
-                <span className="hidden sm:inline">Choose plan</span>
+                <span className="hidden sm:inline">Next</span>
                 <svg
                   className="w-3.5 h-3.5 ms-2"
                   aria-hidden="true"
@@ -239,7 +239,7 @@ const News = () => {
       </div>
 
       <Footer />
-    </div>
+    </>
   );
 };
 

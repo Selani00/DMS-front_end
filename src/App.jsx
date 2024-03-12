@@ -5,6 +5,7 @@ import Registration from './pages/Registration'
 import Donations from './pages/Donations'
 import Weather from './pages/Weather'
 import Contact from './pages/Contact'
+import Plan from './pages/Plan'
 import News from './pages/News'
 import SafetyTips from './pages/SafetyTips'
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/Donations" element={<Donations/>} />
         <Route path="/Weather" element={<Weather/>} />
         <Route path="/Contact" element={<Contact/>} />
+        <Route path="/Plan" element={<Plan/>} />
         <Route path="/News" element={<News/>} />
         <Route path="/SafetyTips" element={<SafetyTips/>} />    
         <Route path="/Emergancy" element={<Emergancy/>} />
