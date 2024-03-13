@@ -46,6 +46,7 @@ const showSlider = () => {
   }
 };
 
+
 const Image_slider = () => {
   const [timerEnabled, setTimerEnabled] = useState(true);
 
@@ -63,18 +64,19 @@ const Image_slider = () => {
   return (
     <div>
       <div className="relative">
+        
         <ul id="slider">
           <li className="h-[60vh] relative ">
-            <img src={image1} alt="" className="w-full h-full object-cover" />
+            <img src={image1} alt="" className="w-full h-full object-cover inset-0" />
           </li>
           <li className="h-[60vh] relative hidden">
-            <img src={image2} alt="" className="w-full h-full object-cover" />
+            <img src={image2} alt="" className="w-full h-full object-cover inset-0" />
           </li>
           <li className="h-[60vh] relative hidden">
-            <img src={image3} alt="" className="w-full h-full object-cover" />
+            <img src={image3} alt="" className="w-full h-full object-cover inset-0" />
           </li>
           <li className="h-[60vh] relative hidden">
-            <img src={image4} alt="" className="w-full h-full object-cover" />
+            <img src={image4} alt="" className="w-full h-full object-cover inset-0" />
           </li>
         </ul>
 
