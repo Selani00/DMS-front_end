@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import { FaXmark, FaBars } from "react-icons/fa6";
+import { Button } from "flowbite-react";
+
 
 
 const Navbar = () => {
@@ -69,19 +71,17 @@ const Navbar = () => {
           {!user? 
           <RouterLink to="/Login">
            
-          <button className="relative inline-flex items-center justify-center px-2 overflow-hidden text-base font-semibold text-white rounded-lg border-white border-2">
-            <span class="relative px-5 py-1.5 transition duration-300 hover:scale-125 ">
-              
-              Sign In
-            </span>
-          </button>
-        </RouterLink>
+          
+          <Button gradientMonochrome="info" className="text-lg font-semibold">Sign In</Button>
+        </RouterLink> 
           :     
           <button className="relative inline-flex items-center justify-center px-2 overflow-hidden text-base font-semibold text-white rounded-lg border-white border-2" onClick={logout}>
             <span class="relative px-5 py-1.5 transition duration-300 hover:scale-125 ">             
               log out
             </span>
           </button>
+
+          
        
           }
           

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Link} from "react-router-dom";
+import { Button } from "flowbite-react";
 
 import GoogleImg from "../assets/google.png";
 import axios from "axios";
 import { message } from "antd";
-
-
-import Back from "../components/Common/BackButton";
+import Navbar from "../components/Common/Navbar";
+import LanguageBar from "../components/Common/LanguageBar";
+import Footer from "../components/Common/Footer";
 
 
 const Login = () => {
@@ -45,13 +46,10 @@ const Login = () => {
   
 
   return (
-    <div className="container mx-auto p-5 md:p-0">
-      
-      <div className="py-2 px-0">
-        <Back/>
-      </div>
-
-      
+    <>
+    
+    <Navbar/>
+    <div className="py-10">      
       <div className="max-w-sm mx-auto bg-white px-10 py-10 rounded-2xl shadow-2xl">
         <div className="text-center mb-8">
           <h1 className="font-bold text-3xl text-primary">Login</h1>
@@ -104,6 +102,7 @@ const Login = () => {
             Sign In
           </button>
           
+          
           <h4 className="text-center my-4 font-semibold">Or</h4>
 
           <button class="px-4 py-2 my-5 border flex items-center justify-center gap-2 border-slate-200  w-full rounded-lg text-slate-700  hover:border-slate-400  hover:text-slate-900  hover:shadow transition duration-150">
@@ -120,6 +119,9 @@ const Login = () => {
         </form>
       </div>
     </div>
+    <Footer/>
+
+    </>
   );
 
 };
