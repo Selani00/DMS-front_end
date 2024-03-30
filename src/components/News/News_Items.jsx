@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import image from "../../assets/Footer.png";
 import image2 from "../../assets/about.png";
 import defaulf_image from "../../assets/News.png"
+import axios from 'axios';
+
+
 
 const news_list = [
     {
@@ -16,7 +19,7 @@ const news_list = [
         "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
     },
     {
-      id: 1,
+      id: 2,
       heading: "This is news heading 2 dw  dwef  ew fcds fsdf sdfdssdfsdf fdsfsdfdsf fdsfds",
       Auther: "Auther 2",
       date: "31 Dec 2023",
@@ -26,7 +29,7 @@ const news_list = [
         "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
     },
     {
-      id: 1,
+      id: 3,
       heading: "This is news heading 3",
       Auther: "Auther 3",
       date: "31 Dec 2023",
@@ -36,7 +39,7 @@ const news_list = [
         "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
     },
     {
-      id: 1,
+      id: 4,
       heading: "This is news heading 4",
       Auther: "Auther 4",
       date: "31 Dec 2023",
@@ -46,7 +49,7 @@ const news_list = [
         "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
     },
     {
-        id: 2,
+        id: 5,
         heading: "This is news heading 4",
         Auther: "Auther 4",
         date: "31 Dec 2023",
@@ -57,16 +60,31 @@ const news_list = [
   ];
 
 
-const News_Items = ({onSelectedNews}) => {
+const News_Items = ({onSelectedNews}) => {  
     const [newsSelected,setNewsSelected]=useState(news_list[0]);
+    // const [newsList,setNewsList]=useState([]);
+
+    // async function fetchNews(){
+    //   const newsItems = await axios.post("http://localhost:5000/api/news/getNews");
+    //   setNewsList(newsItems);
+    //   setNewsSelected(newsItems.data[0]);
+    // }
+
     const handleMouseClick = (news) => {
       setNewsSelected(news);
       onSelectedNews(news);// This will be a function to pass the selected news to the parent component
     };
 
     useEffect(()=>{
-        onSelectedNews(newsSelected);
+      // (async () => await fetchNews())();
+      onSelectedNews(newsSelected);
     },[]);
+
+    // useEffect(()=>{
+    //   if(newsSelected) console.log("Selected News",newsSelected);
+    // },[newsSelected]);
+
+
   return (
     <>
     <div className="px-2 py-2">

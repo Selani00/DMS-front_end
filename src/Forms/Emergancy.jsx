@@ -23,13 +23,11 @@ const Emergancy = () => {
         {
           disasterType:disasterType,
           disasterLocation: disasterLocation,
-          peopleEffected: peopleEffected,
-          medicalSupport: medicalSupport,
+          affectedCount: peopleEffected,
+          medicalNeed: medicalSupport,
           otherNeeds: otherNeeds
         }
       );
-
-      
 
       message.success("Request send  successfully");
 

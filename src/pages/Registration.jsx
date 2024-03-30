@@ -51,7 +51,7 @@ const Registration = () => {
         </div>
 
         <form >
-          <div class="relative my-5">
+          <div className="relative my-5">
             <input
               type="text"
               value={userName}

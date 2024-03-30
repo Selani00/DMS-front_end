@@ -10,9 +10,29 @@ import News_Items from "../components/News/News_Items";
 
 const News = () => {
   const [selectedNews, setNewsSelected] = useState(null);
+ 
+  
+ 
 
   const handleSelectNews = (news) => {
     setNewsSelected(news);
+    
+  };
+
+  // When click the prev the page should log the previous news
+  const handlePrevNews = () => {
+    if(selectedNews.id > 1){
+      setNewsSelected(selectedNews- 1);
+    }
+    
+  };
+
+  // When click the next the page should log the next news
+  const handleNextNews = () => {
+    if(selectedNews.id < length){
+      setNewsSelected(selectedNews + 1);
+    }
+    
   };
 
   return (
@@ -38,7 +58,6 @@ const News = () => {
       </div>
 
       {/* Search */}
-
       <SearchBar />
 
       {/* News Section */}
@@ -82,7 +101,9 @@ const News = () => {
           <div className="flex justify-between my-10 mx-5">
             <button
               type="button"
-              className="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm md:px-5 px-2.5 py-2.5 text-center inline-flex items-center"
+              className="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-full text-sm md:px-5 px-2.5 py-2.5 text-center inline-flex items-center"
+              // onClick={handlePrevNews}
+              
             >
               <svg
                 className="w-3.5 h-3.5 me-2 transform rotate-180"
@@ -104,7 +125,9 @@ const News = () => {
 
             <button
               type="button"
-              className="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm md:px-5 px-2.5 py-2.5 text-center inline-flex items-center "
+              className="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-full text-sm md:px-5 px-2.5 py-2.5 text-center inline-flex items-center "
+              
+             
             >
               <span className="hidden sm:inline">Next</span>
               <svg
